@@ -27,42 +27,17 @@ export function AsideMenuMain() {
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
         </div>
       </div>
-      <AsideMenuItemWithSub
-        to='/crafted/pages'
-        title='Pages'
-        fontIcon='bi-archive'
-        icon='/media/icons/duotune/general/gen022.svg'
-      >
-        <AsideMenuItemWithSub to='/crafted/pages/profile' title='Profile' hasBullet={true}>
-          <AsideMenuItem to='/crafted/pages/profile/overview' title='Overview' hasBullet={true} />
-          <AsideMenuItem to='/crafted/pages/profile/projects' title='Projects' hasBullet={true} />
-          <AsideMenuItem to='/crafted/pages/profile/campaigns' title='Campaigns' hasBullet={true} />
-          <AsideMenuItem to='/crafted/pages/profile/documents' title='Documents' hasBullet={true} />
-          <AsideMenuItem
-            to='/crafted/pages/profile/connections'
-            title='Connections'
-            hasBullet={true}
-          />
-        </AsideMenuItemWithSub>
+      <AsideMenuItemWithSub to='/crafted/pages' title='API' fontIcon='bi-archive' icon='/media/icons/duotune/general/gen022.svg' >
+          <AsideMenuItem to='/addvideo' title='Add Main Video' hasBullet={true} />
+          <AsideMenuItem to='/crafted/pages/wizards/horizontal' title='Add Project Image' hasBullet={true} />
+          <AsideMenuItem to='/crafted/pages/wizards/vertical' title='Add Client Review' hasBullet={true} />
+      </AsideMenuItemWithSub>
 
-        <AsideMenuItemWithSub to='/crafted/pages/wizards' title='Wizards' hasBullet={true}>
-          <AsideMenuItem
-            to='/crafted/pages/wizards/horizontal'
-            title='Horizontal'
-            hasBullet={true}
-          />
-          <AsideMenuItem to='/crafted/pages/wizards/vertical' title='Vertical' hasBullet={true} />
-        </AsideMenuItemWithSub>
+      <AsideMenuItemWithSub to='/crafted/accounts' title='Manage API Data' icon='/media/icons/duotune/communication/com006.svg' fontIcon='bi-person'>
+        <AsideMenuItem to='/getvideo' title='Get Video' hasBullet={true} />
+        {/*<AsideMenuItem to='/crafted/account/settings' title='Settings' hasBullet={true} />*/}
       </AsideMenuItemWithSub>
-      <AsideMenuItemWithSub
-        to='/crafted/accounts'
-        title='Accounts'
-        icon='/media/icons/duotune/communication/com006.svg'
-        fontIcon='bi-person'
-      >
-        <AsideMenuItem to='/crafted/account/overview' title='Overview' hasBullet={true} />
-        <AsideMenuItem to='/crafted/account/settings' title='Settings' hasBullet={true} />
-      </AsideMenuItemWithSub>
+
       <AsideMenuItemWithSub
         to='/error'
         title='Errors'
