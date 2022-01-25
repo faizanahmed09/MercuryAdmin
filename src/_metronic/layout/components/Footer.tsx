@@ -13,8 +13,8 @@ const Footer: FC = () => {
         {/* begin::Copyright */}
         <div className='text-dark order-2 order-md-1'>
           <span className='text-muted fw-bold me-2'>{new Date().getFullYear()} &copy;</span>
-          <a href='#' className='text-gray-800 text-hover-primary'>
-            Keenthemes
+          <a className='text-gray-800 text-hover-primary fw-bold'>
+            Mercury Sols
           </a>
         </div>
         {/* end::Copyright */}

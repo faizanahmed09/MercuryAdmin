@@ -27,14 +27,17 @@ export function AsideMenuMain() {
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
         </div>
       </div>
-      <AsideMenuItemWithSub to='/crafted/pages' title='API' fontIcon='bi-archive' icon='/media/icons/duotune/general/gen022.svg' >
-          <AsideMenuItem to='/addvideo' title='Add Main Video' hasBullet={true} />
-          <AsideMenuItem to='/crafted/pages/wizards/horizontal' title='Add Project Image' hasBullet={true} />
-          <AsideMenuItem to='/crafted/pages/wizards/vertical' title='Add Client Review' hasBullet={true} />
-      </AsideMenuItemWithSub>
 
+      <AsideMenuItemWithSub to='/crafted/pages' title='API' fontIcon='bi-archive' icon='/media/icons/duotune/general/gen022.svg' >
+          <AsideMenuItem to='/addVideo' title='Add Main Video' hasBullet={true} />
+          <AsideMenuItem to='/addProjectImg' title='Add Project Image' hasBullet={true} />
+          <AsideMenuItem to='/addClientReview' title='Add Client Review' hasBullet={true} />
+      </AsideMenuItemWithSub>
+s
       <AsideMenuItemWithSub to='/crafted/accounts' title='Manage API Data' icon='/media/icons/duotune/communication/com006.svg' fontIcon='bi-person'>
-        <AsideMenuItem to='/getvideo' title='Get Video' hasBullet={true} />
+        <AsideMenuItem to='/getVideo' title='Get Video' hasBullet={true} />
+        <AsideMenuItem to='/getProjectImg' title='Get Project Image' hasBullet={true} />
+        <AsideMenuItem to='/getClientReview' title='Get Client Review' hasBullet={true} />
         {/*<AsideMenuItem to='/crafted/account/settings' title='Settings' hasBullet={true} />*/}
       </AsideMenuItemWithSub>
 

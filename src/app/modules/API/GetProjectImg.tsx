@@ -6,30 +6,18 @@ import moment from "moment";
 import Swal from 'sweetalert2'
 
 
-const GetVideo = () =>{
-    const [video,setVideo]= useState<any[]>([]);
+const GetProjectImg = () =>{
+    const [img,setImg]= useState<any[]>([]);
     useEffect(()=>{
-        axios.get("https://mercurysolsweb.herokuapp.com/rest/api/admin/get_home_video")
+        axios.get("https://mercurysolsweb.herokuapp.com/rest/api/admin/get_feature_image")
             .then((resp)=>{
                 // let a = resp.data.data;
                 // console.log(a);
-                setVideo(resp.data.data)
-                console.log(setVideo(resp.data.data));
+                setImg(resp.data.data)
+                console.log(setImg(resp.data.data));
             })
     },[])
 
-
-    const deleteCategory = (id :any) => {
-
-        axios.delete("http://localhost:3000/clientReview/1").then((res)=>{
-            setVideo(video.filter((item,index)=>item.id!==id))
-            if(res.status === 200)
-            {
-                //deleteClicked.closest("tr").remove();
-                Swal.fire<any>('Successfully Deleted')
-            }
-        })
-    }
 
     return(
         <>
@@ -63,7 +51,7 @@ const GetVideo = () =>{
                         <tbody>
 
                         {
-                            video.map((video,i) =>{
+                            img.map((img,i) =>{
                                 return(
                                     <tr key={i}>
                                         <td>
@@ -80,13 +68,13 @@ const GetVideo = () =>{
 
                                         <td>
                                             <a  className='text-dark fw-bolder text-hover-primary d-block mb-1 fs-6'>
-                                                {moment(video.createdAt).format("DD-MM-YYYY")}
+                                                {moment(img.createdAt).format("DD-MM-YYYY")}
                                             </a>
                                         </td>
 
                                         <td>
                                             <a className='text-dark fw-bolder text-hover-primary d-block mb-1 fs-6'>
-                                                {video.videoLink}
+                                                {img.image}
                                             </a>
                                         </td>
 
@@ -104,7 +92,7 @@ const GetVideo = () =>{
                                                 <KTSVG path='/media/icons/duotune/art/art005.svg' className='svg-icon-3' />
                                             </a>
 
-                                            <a onClick={()=>deleteCategory(video._id)} className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
+                                            <a className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
                                                 <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
                                             </a>
                                         </td>
@@ -123,4 +111,4 @@ const GetVideo = () =>{
         </>
     )
 }
-export default GetVideo;
+export default GetProjectImg;

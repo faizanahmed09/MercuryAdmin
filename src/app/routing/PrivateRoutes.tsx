@@ -5,6 +5,10 @@ import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
 import AddVideo from "../modules/API/AddVideo";
 import GetVideo from "../modules/API/GetVideo";
+import AddProjectImg from "../modules/API/AddProjectImg";
+import AddClientReview from "../modules/API/AddClientReview";
+import GetProjectImg from "../modules/API/GetProjectImg";
+import GetClientReview from "../modules/API/GetClientReview";
 
 export function PrivateRoutes() {
   const BuilderPageWrapper = lazy(() => import('../pages/layout-builder/BuilderPageWrapper'))
@@ -18,8 +22,14 @@ export function PrivateRoutes() {
     <Suspense fallback={<FallbackView />}>
       <Switch>
         <Route path='/dashboard' component={DashboardWrapper} />
-        <Route path='/addvideo' component={AddVideo} />
-        <Route path='/getvideo' component={GetVideo} />
+        <Route path='/addVideo' component={AddVideo} />
+        <Route path='/getVideo' component={GetVideo} />
+        <Route path='/addProjectImg' component={AddProjectImg} />
+        <Route path='/getProjectImg' component={GetProjectImg} />
+        <Route path='/getClientReview' component={GetClientReview} />
+
+        <Route path='/addClientReview' component={AddClientReview} />
+
         <Route path='/builder' component={BuilderPageWrapper} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
         <Route path='/crafted/pages/wizards' component={WizardsPage} />
